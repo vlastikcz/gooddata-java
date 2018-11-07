@@ -58,6 +58,10 @@
           }
         ]
       }
+    ],
+    "similarVisualizations": [
+      {"score": "0.1", "uri": "uri1"},
+      {"score": "0.2", "uri": "uri2"}
     ]
   }
 }
