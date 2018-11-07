@@ -29,7 +29,12 @@ class ExecutionResponseTest extends Specification {
                                         new MeasureHeaderItem('Accounting Amount [Sum]', 'format1', 'sum', '/gdc/md/FoodMartDemo/obj/114', 'metric.sum'),
                                         new MeasureHeaderItem('Accounting Amount [Avg]', 'format2', 'avg', '/gdc/md/FoodMartDemo/obj/115', 'metric.avg')
                                 ]))
-                ], 'poll'),
+
+                ], 'poll', [
+                new ExecutionResponse.SimilarVisualizations("0.1", "uri1"),
+                new ExecutionResponse.SimilarVisualizations("0.2", "uri2")
+
+                ]),
                 jsonEquals(resource(EXECUTION_RESPONSE_JSON))
     }
 
@@ -72,5 +77,6 @@ class ExecutionResponseTest extends Specification {
 
         response.toString()
     }
+
 
 }
