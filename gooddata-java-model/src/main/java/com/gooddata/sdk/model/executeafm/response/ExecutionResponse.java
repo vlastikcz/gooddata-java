@@ -15,6 +15,7 @@ import com.gooddata.sdk.model.executeafm.Execution;
 import com.gooddata.sdk.model.executeafm.result.ExecutionResult;
 import com.gooddata.util.GoodDataToStringBuilder;
 
+import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -94,20 +95,20 @@ public class ExecutionResponse {
     }
 
     public static final class SimilarVisualizations {
-        private String score;
+        private BigDecimal score;
         private String uri;
 
         @JsonCreator
-        public SimilarVisualizations(@JsonProperty("score") String score, @JsonProperty("uri") String uri) {
+        public SimilarVisualizations(@JsonProperty("score") BigDecimal score, @JsonProperty("uri") String uri) {
             this.score = score;
             this.uri = uri;
         }
 
-        public String getScore() {
+        public BigDecimal getScore() {
             return score;
         }
 
-        public void setScore(String score) {
+        public void setScore(BigDecimal score) {
             this.score = score;
         }
 

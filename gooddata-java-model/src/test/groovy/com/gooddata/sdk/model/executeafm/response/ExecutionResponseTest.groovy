@@ -31,8 +31,8 @@ class ExecutionResponseTest extends Specification {
                                 ]))
 
                 ], 'poll', [
-                new ExecutionResponse.SimilarVisualizations("0.1", "uri1"),
-                new ExecutionResponse.SimilarVisualizations("0.2", "uri2")
+                new ExecutionResponse.SimilarVisualizations(new BigDecimal("0.1"), "uri1"),
+                new ExecutionResponse.SimilarVisualizations(new BigDecimal("0.2"), "uri2")
 
                 ]),
                 jsonEquals(resource(EXECUTION_RESPONSE_JSON))
